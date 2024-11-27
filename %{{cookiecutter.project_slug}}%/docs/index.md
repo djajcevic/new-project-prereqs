@@ -72,6 +72,8 @@ dependsOn:
   - name: <naziv aplikacije ili sustava>
 ```
 
+[//]: # (TODO: ako postoji shematski prikaz prilozite ga ovdje)
+
 ---
 
 ## 4. Konfiguracija za Kubernetes

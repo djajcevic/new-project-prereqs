@@ -1,9 +1,5 @@
 # Welcome to Docs Base
 
-
-
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
 ## Prerequisites
 
 ### Cookiecutter
@@ -28,6 +24,8 @@ cookiecutter https://github.com/djajcevic/new-project-prereqs.git
 ```
 
 ### Mkdocs
+
+For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 - installed Python 3
 - installed `pip`

@@ -14,8 +14,18 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
   
     For Cookiecutter installations instructions visit [installation](https://cookiecutter.readthedocs.io/en/stable/installation.html) page.
 
+#### Generating project
 
+Run following command to generate project and provide input:
 
+**Windows**
+```shell
+cookiecutter.exe https://github.com/djajcevic/new-project-prereqs.git
+```
+**Linux**
+```shell
+cookiecutter https://github.com/djajcevic/new-project-prereqs.git
+```
 
 ### Mkdocs
 

@@ -1,0 +1,100 @@
+{
+  "_default_context": {
+    "database": "N",
+    "secrets_management_tool": "N",
+    "json_logging_compatible": "Y",
+    "target_env_Dev": "N",
+    "target_env_Test":"Y",
+    "target_env_UAT": "Y",
+    "target_env_Prod":"Y"
+  },
+  "_jinja2_env_vars": {
+    "variable_start_string": "%{{",
+    "variable_end_string": "}}%"
+  },
+  "display_name": "My APP",
+  "project_slug": "%{{ cookiecutter.display_name|lower|replace(' ', '-') }}%",
+  "build_script": "build.sh",
+  "containerize_script": "containerize.sh",
+  "default_cpu": "500m",
+  "default_memory": "512Mi",
+  "limit_cpu": "1",
+  "limit_memory": "1Gi",
+  "storage_claims": "nije potrebna",
+  "database": ["N", "Y"],
+  "env_variables": "",
+  "secrets_management_tool": ["Y", "N"],
+  "config_mount_path": "",
+  "config_examples": "/app/application.json",
+  "exposed_ports": "8080",
+  "network_access_rules": "https://app.example.com",
+  "json_logging_compatible": ["Y", "N"],
+  "default_replicas": "1",
+  "hpa_thresholds": "CPU > 70%",
+  "unit_test_script_location": "ne postoji",
+  "integration_test_script_location": "ne postoji",
+  "performance_test_script_location": "ne postoji",
+  "team_leads": "Ime Prezime <email@example.com>",
+  "target_env_Dev": ["N", "Y"],
+  "target_env_Test": ["Y", "N"],
+  "target_env_UAT": ["Y", "N"],
+  "target_env_Prod": ["Y", "N"],
+  "__prompts__": {
+    "display_name": "Unesite naziv aplikacije (npr. My App)",
+    "project_slug": "Unesite ime projekta (koristit će se kao identifikator projekta)",
+    "build_script": "Unesite lokaciju skripte za build",
+    "containerize_script": "Unesite lokaciju skripte za kontejnerizaciju",
+    "default_cpu": "Unesite zadani CPU (npr. 500m za 0.5 jezgri)",
+    "default_memory": "Unesite zadanu memoriju (npr. 512Mi za 512 megabajta)",
+    "limit_cpu": "Unesite maksimalni CPU limit (npr. 1 za jednu jezgru, 500m za pola jezgre)",
+    "limit_memory": "Unesite maksimalni limit memorije (npr. 1Gi za 1 gigabajt, 500Mi za 500 megabajta)",
+    "storage_claims": "Unesite količinu pohrane potrebnu za projekt (npr. 10Gi)",
+    "database": {
+      "__prompt__": "Da li je potrebna baza podataka?",
+      "Y": "Da",
+      "N": "Ne"
+    },
+    "env_variables": "Unesite varijable okruženja (npr. CONFIG_LOCATION=/app/application.json)",
+    "config_mount_path": "Unesite putanju za postavljanje konfiguracijskih datoteka u kontejner (npr. /app/application.json)",
+    "config_examples": "Dajte primjer konfiguracijske datoteke (npr. config.yaml)",
+    "exposed_ports": "Koje portove aplikacija izlaže odvojenih zarezom? (npr. 8080, 443)",
+    "network_access_rules": "Unesite mrežna pravila pristupa (npr. URL-ovi ili IP ograničenja)",
+    "secrets_management_tool": {
+      "__prompt__": "Koristi li aplikacija tajne vrijednosti (secrete)?",
+      "Y": "Da",
+      "N": "Ne"
+    },
+    "json_logging_compatible": {
+      "__prompt__": "Da li je aplikacija prilagođena da ispisuje JSON format logova?",
+      "Y": "Da",
+      "N": "Ne"
+    },
+    "default_replicas": "Koliko replika želite zadano? (cijeli broj)",
+    "hpa_thresholds": "Unesite HPA pragove za skaliranje (npr. CPU > 70%)",
+    "unit_test_script_location": "Lokacija skripte za izvršavanje unit testova? (opcionalno)",
+    "integration_test_script_location": "Lokacija skripte za izvršavanje integracijskih testova? (opcionalno)",
+    "performance_test_script_location":  "Lokacija skripte za izvršavanje performansnih testova? (opcionalno)",
+    "team_leads": "Unesite podatke voditelja tima odvojenih zarezom (npr. Ime Prezime <email@example.com>)",
+    "target_env_Dev": {
+      "__prompt__": "Koristi li aplikacija razvojno (Dev) okruženje?",
+      "N": "Ne",
+      "Y": "Da"
+    },
+    "target_env_Test": {
+      "__prompt__": "Koristi li aplikacija testno (Test) okruženje?",
+      "Y": "Da",
+      "N": "Ne"
+    },
+    "target_env_UAT": {
+      "__prompt__": "Koristi li aplikacija UAT (User Acceptance Testing) okruženje?",
+      "Y": "Da",
+      "N": "Ne"
+    },
+    "target_env_Prod": {
+      "__prompt__": "Koristi li aplikacija produkcijsko (Prod) okruženje?",
+      "Y": "Da",
+      "N": "Ne"
+    }
+  }
+
+}
